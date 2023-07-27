@@ -1,0 +1,11 @@
+[default]
+MSG = "This is the default environment"
+
+[development]
+MSG = "This is the development environment"
+
+[testing]
+MSG = "This is the testing environment"
+
+[production]
+MSG = "This is the production environment"
