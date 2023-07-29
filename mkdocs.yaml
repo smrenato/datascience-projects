@@ -1,5 +1,5 @@
 site_name: Datascience Projects
-site_url: https://squidfunk.github.io/smrenato/datascience-projects/
+site_url: https://smrenato.datascience-projects/
 site_author: Renato
 site_description: >-
   A collection of datascience projects
@@ -10,10 +10,11 @@ repo_url: https://github.com/smrenato/datascience-projects
 
 theme:
   name: material
+  features:
+    - content.code.copy
 
   palette:
-  
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: deep orange
@@ -21,8 +22,9 @@ theme:
         icon: material/brightness-2
         name: Switch to light mode
 
-    - scheme: default
-      primary: black
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
       accent: deep orange
       toggle:
         icon: material/brightness-5
@@ -31,10 +33,35 @@ theme:
   icon:
     repo: fontawesome/brands/github-alt
 
-# markdown_extensions:
-#   - pymdownx.emoji
-#   - pymdownx.tasklist
-#   - pymdownx.mark
-#   - pymdownx.tilde
-#   - pymdownx.highlight
-#   - pymdownx.superfences
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
